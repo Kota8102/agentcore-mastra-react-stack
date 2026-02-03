@@ -1,4 +1,4 @@
-# test-agents
+# agentcore-mastra-react-stack
 
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22.13.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
@@ -12,6 +12,11 @@ MastraエージェントをAWS Bedrock AgentCoreでマネージド実行し、AI
 - **AWS Bedrock AgentCore** - サーバーレスでスケーラブルなエージェントランタイム
 
 ## アーキテクチャ
+
+![Architecture](docs/architecture.drawio.svg)
+
+<details>
+<summary>シンプル版（Mermaid）</summary>
 
 ```mermaid
 flowchart TB
@@ -37,6 +42,8 @@ flowchart TB
     Mastra -->|"AI SDK Bedrock"| Bedrock
 ```
 
+</details>
+
 ## クイックスタート
 
 ### 前提条件
@@ -50,8 +57,8 @@ flowchart TB
 
 ```bash
 # リポジトリのクローン
-git clone <repository-url>
-cd test-agents
+git clone https://github.com/Kota8102/agentcore-mastra-react-stack.git
+cd agentcore-mastra-react-stack
 
 # 依存関係のインストール
 npm install
@@ -80,7 +87,7 @@ npm run dev -w web           # localhost:5173
 ## プロジェクト構成
 
 ```
-test-agents/
+agentcore-mastra-react-stack/
 ├── web/                  # React + AI SDK useChat
 │   ├── src/
 │   │   ├── components/   # UIコンポーネント
@@ -123,11 +130,11 @@ test-agents/
 
 | ファイル | 変数名 | 説明 |
 |---------|--------|------|
-| `mastra/.env` | `PORT` | サーバーポート（デフォルト: 8080） |
-| `mastra/.env` | `AWS_REGION` | AWSリージョン（デフォルト: us-east-1） |
-| `web/.env.development` | `VITE_API_URL` | APIエンドポイント |
-
-**VITE_API_URLの設定例**: Honoサーバー → `/invocations`、Mastra Studio → `/chat/agent`、AWS → `https://xxx.execute-api.../chat/stream`
+| `mastra/.env` | `OPENAI_API_KEY` | OpenAI APIキー |
+| `web/.env` | `VITE_API_URL` | APIエンドポイント |
+| `web/.env` | `VITE_USER_POOL_ID` | Cognito User Pool ID |
+| `web/.env` | `VITE_USER_POOL_CLIENT_ID` | Cognito User Pool Client ID |
+| `web/.env` | `VITE_IDENTITY_POOL_ID` | Cognito Identity Pool ID |
 
 ## デプロイ
 
