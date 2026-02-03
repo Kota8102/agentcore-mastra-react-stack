@@ -1,6 +1,5 @@
 # test-agents
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D22.13.0-brightgreen)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
 
@@ -152,7 +151,3 @@ npm run cdk -w cdk -- deploy
 - [AWS Bedrock AgentCore](https://docs.aws.amazon.com/bedrock-agentcore/)
 - [AWS CDK](https://docs.aws.amazon.com/cdk/)
 - [Hono](https://hono.dev/)
-
-## License
-
-ISC
