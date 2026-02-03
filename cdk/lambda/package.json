@@ -1,0 +1,22 @@
+{
+	"name": "lambda",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@aws-lambda-powertools/logger": "^2.0.0",
+		"@aws-sdk/client-bedrock-agentcore": "^3.974.0",
+		"cdk-ecr-deployment": "^4.0.6",
+		"hono": "^4.7.0"
+	},
+	"devDependencies": {
+		"@types/aws-lambda": "^8.10.145",
+		"@types/node": "^22"
+	}
+}

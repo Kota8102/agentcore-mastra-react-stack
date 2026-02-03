@@ -1,0 +1,23 @@
+{
+	"name": "test-agents",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"workspaces": [
+		"web",
+		"mastra",
+		"cdk",
+		"cdk/lambda"
+	],
+	"devDependencies": {
+		"@aws-sdk/client-bedrock-agentcore": "^3.974.0",
+		"@biomejs/biome": "2.3.11",
+		"shadcn": "^3.7.0"
+	}
+}
