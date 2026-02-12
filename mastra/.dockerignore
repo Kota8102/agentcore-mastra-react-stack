@@ -1,0 +1,12 @@
+node_modules
+.mastra
+.git
+.gitignore
+*.md
+.env
+.env.*
+!.env.example
+dist
+coverage
+.nyc_output
+*.log

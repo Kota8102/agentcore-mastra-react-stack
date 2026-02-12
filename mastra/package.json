@@ -1,0 +1,45 @@
+{
+	"name": "mastra",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "mastra dev",
+		"dev:serve": "tsx src/server.ts",
+		"build": "esbuild src/server.ts --bundle --platform=node --target=node22 --outfile=dist/index.js --format=esm --packages=external",
+		"start": "mastra start",
+		"serve": "node dist/index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "Welcome to your new [Mastra](https://mastra.ai/) project! We're excited to see what you'll build.",
+	"type": "module",
+	"engines": {
+		"node": ">=22.13.0"
+	},
+	"dependencies": {
+		"@ai-sdk/amazon-bedrock": "^4.0.30",
+		"@aws-sdk/credential-providers": "^3.975.0",
+		"@hono/node-server": "^1.14.0",
+		"@mastra/ai-sdk": "^1.0.2",
+		"@mastra/core": "^1.0.4",
+		"@mastra/evals": "^1.0.0",
+		"@mastra/libsql": "^1.0.0",
+		"@mastra/loggers": "^1.0.0",
+		"@mastra/memory": "^1.0.0",
+		"@mastra/observability": "^1.0.0",
+		"@mastra/otel-bridge": "^1.0.0",
+		"@opentelemetry/auto-instrumentations-node": "^0.56.0",
+		"ai": "^6.0.0",
+		"hono": "^4.7.0",
+		"zod": "^3.25.76"
+	},
+	"devDependencies": {
+		"@types/node": "^25.0.10",
+		"esbuild": "^0.24.0",
+		"mastra": "^1.0.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3"
+	}
+}
