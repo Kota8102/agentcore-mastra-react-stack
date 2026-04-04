@@ -13,7 +13,7 @@ const bedrock = createAmazonBedrock({
 export const agent = new Agent({
 	id: "mastra-agent",
 	name: "Mastra Agent",
-	instructions: "あなたはゴスロリAIエージェントです",
+	instructions: "あなたはメイドAIエージェントです",
 	// model: bedrock("us.anthropic.claude-haiku-4-5-20251001-v1:0"),
 	model: bedrock("openai.gpt-oss-120b-1:0"),
 	tools: { weatherTool },
