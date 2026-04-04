@@ -86,7 +86,7 @@ npm run dev -w web           # localhost:5173
 
 ## プロジェクト構成
 
-```
+```txt
 agentcore-mastra-react-stack/
 ├── web/                  # React + AI SDK useChat
 │   ├── src/
