@@ -15,35 +15,6 @@ MastraエージェントをAWS Bedrock AgentCoreでマネージド実行し、AI
 
 ![Architecture](docs/architecture.drawio.svg)
 
-<details>
-<summary>シンプル版（Mermaid）</summary>
-
-```mermaid
-flowchart TB
-    subgraph Client
-        Web["React Frontend<br/>AI SDK useChat"]
-    end
-
-    subgraph "AWS CDK Stack"
-        APIGW["API Gateway<br/>Streaming対応"]
-        Lambda["Lambda<br/>Hono"]
-        AgentCore["Bedrock AgentCore<br/>Runtime"]
-        Mastra["Mastra Agent<br/>+ AI SDK"]
-    end
-
-    subgraph Models
-        Bedrock["Amazon Bedrock<br/>Claude Haiku 4.5"]
-    end
-
-    Web -->|"SSE Stream"| APIGW
-    APIGW --> Lambda
-    Lambda -->|"InvokeAgentRuntime"| AgentCore
-    AgentCore -->|"HTTP Protocol"| Mastra
-    Mastra -->|"AI SDK Bedrock"| Bedrock
-```
-
-</details>
-
 ## クイックスタート
 
 ### 前提条件
